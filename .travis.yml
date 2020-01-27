@@ -16,7 +16,7 @@ script: "./gradlew clean build"
 
 defore_deploy:
   - zip -r springboot-with-aws *
-  - mkdir -r deploy
+  - mkdir -p deploy
   - mv springboot-with-aws.zip deploy/springboot-with-aws.zip
 
 deploy:
