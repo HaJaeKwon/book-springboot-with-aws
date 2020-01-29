@@ -29,6 +29,17 @@ deploy:
     acl: private
     local_dir: deploy
     wait-until-deployed: true
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: springboot-with-aws-build
+    key: springboot-with-aws.zip
+    bundle_type: zip
+    application: springboot-with-aws # 웹 콘솔에서 등록한 CodeDeploy 애플리케이션
+    deployment_group: springboot-with-aws-group
+    region: ap-northeast-2
+    wait-until-deployed: true
+
 
 notifications:
   email:
