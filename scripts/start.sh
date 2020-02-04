@@ -13,7 +13,7 @@ echo "> cp $REPOSITORY/zip/*.war $REPOSITORY/"
 cp $REPOSITORY/zip/*.war $REPOSITORY/
 
 echo "> 새 어플리케이션 배포"
-WAR_NAME=$(ls -tr $REPOSITORY/*.war | tail - n 1)
+WAR_NAME=$(ls -tr $REPOSITORY/*.war | tail -n 1)
 
 echo "> WAR Name: $WAR_NAME"
 
