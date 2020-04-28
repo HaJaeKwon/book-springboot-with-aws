@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
 // test/resources/application.properties 추가로 spring security 설정을 잘가져왔지만 오히려 WebMvcTest는 사용하지 않는다
 @WebMvcTest(controllers = HelloController.class,
         excludeFilters = {
-        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)
+                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)
         })
 public class HelloControllerTest {
 

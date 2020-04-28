@@ -27,7 +27,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
         OAuth2UserService delegate = new DefaultOAuth2UserService();
-        OAuth2User oAuth2User= delegate.loadUser(userRequest);
+        OAuth2User oAuth2User = delegate.loadUser(userRequest);
 
         // 현재 진행 중인 서비스를 구분하는 코
         String registrationId = userRequest.getClientRegistration().getRegistrationId();

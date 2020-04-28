@@ -1,5 +1,5 @@
 var index = {
-    init : function () {
+    init: function () {
         var _this = this;
         $('#btn-save').on('click', function () {
             _this.save();
@@ -11,7 +11,7 @@ var index = {
             _this.delete();
         });
     },
-    save : function () {
+    save: function () {
         var data = {
             title: $('#title').val(),
             author: $('#author').val(),
@@ -31,7 +31,7 @@ var index = {
             alert(JSON.stringify(error));
         });
     },
-    update : function () {
+    update: function () {
         var data = {
             title: $('#title').val(),
             content: $('#content').val()
@@ -41,7 +41,7 @@ var index = {
 
         $.ajax({
             type: 'PUT',
-            url: '/api/v1/posts/'+id,
+            url: '/api/v1/posts/' + id,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
@@ -52,12 +52,12 @@ var index = {
             alert(JSON.stringify(error));
         });
     },
-    delete : function () {
+    delete: function () {
         var id = $('#id').val();
 
         $.ajax({
             type: 'DELETE',
-            url: '/api/v1/posts/'+id,
+            url: '/api/v1/posts/' + id,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
         }).done(function () {

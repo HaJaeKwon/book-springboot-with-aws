@@ -10,8 +10,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @SpringBootApplication
 public class SpringbootWithAwsApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootWithAwsApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootWithAwsApplication.class, args);
+    }
 
 }
